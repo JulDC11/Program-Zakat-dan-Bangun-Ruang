@@ -1,0 +1,441 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	 int aplikasi;
+	 cout<<"===================================================\n";
+	 cout<<"/////MEMBUAT PERHITUNGAN ZAKAT DAN BANGUN DATAR////\n"<<endl;
+	 cout<<"===================================================\n";
+	 cout<<"-----------1 Perhitungan Zakat---------------------\n";
+	 cout<<"-----------2 Bangun Datar--------------------------\n";
+	 cout<<"===================================================\n";
+	 cout<<" Masukan kode aplikasi yang di inginkan : ";cin>>aplikasi;
+	 switch(aplikasi)
+	 {
+		  case 1:
+				int zakat;
+				cout<<"		Syarat seseorang mengeluarkan zakat antara lain:\n";
+				cout<<"		>>>Islam\n";
+				cout<<"		>>>Merdeka\n";
+				cout<<"		>>>Berakal dan baligh\n";
+				cout<<"		>>>Memiliki nishab\n"<<endl;
+
+				cout<<"/////////////Macam - Macam Zakat/////////\n";
+				cout<<"-> Zakat fitrah   :  1. Zakat fitrah\n";
+				cout<<"-> Zakat Mal	  :  2. Zakat Emas\n";
+				cout<<"		     3. Zakat Perak\n";
+				cout<<"		     4. Zakat Harta karun\n";
+				cout<<"		     5. Zakat Pertanian\n";
+				cout<<"		     6. Zakat Peternakan\n";
+				cout<<"		     7. Zakat Perniagaan\n";
+				cout<<"		     8. Zakat Penghasilan\n";
+				cout<<"		     9. Zakat Tabungan\n";
+				cout<<"		     10.Zakat Investasi\n"<<endl;
+
+
+				cout<<"masukan angka zakat yang diinginkan :";cin>>zakat;
+				switch (zakat)
+				{
+					 long orang,beras,uang,zakat,total,tb,barang,pendapatan,gram,inves,z;
+					 int fitrah,emas,perak,hk,pertanian,peternakan,perniagaan,penghasilan,tabungan,investasi;
+					 case 1:
+						  cout<<"  1. Zakat fitrah\n ";
+						  cout<<"masukan jumlah orang :";cin>>orang;
+						  beras=2.5*orang;
+						  uang=2.5*orang*10000;
+
+						  cout<<"MEMILIH JENIS OPERASI\n";
+						  cout<<"  1  Beras\n";
+						  cout<<"  2  Uang\n";
+						  cout<<"pilih Beras atau Uang : \n";cin>>fitrah;
+						  switch(fitrah)
+
+						  {
+								case 1:
+									 cout<<"Beras (kg) :"<<beras<<endl;
+									 break;
+								case 2:
+									 cout<<"Uang : Rp."<<uang<<endl;
+									 break;
+						  }
+
+
+						  break;
+					 case 2:
+					      {
+						  int a,b,c,z;
+                          cout<<"Masukkan Jumlah Harta Emas ( Gram ) : ";
+                          cin>>a;
+
+                          if (a>=86) {
+                          cout<<"\n";
+                          cout<<" ===============================\n";
+                          cout<<"||Anda Termasuk Wajib Zakat !! ||\n";
+                          cout<<" ===============================\n";
+                          cout<<"\nSilahkan Isi Data Berikut : \n";
+                          cout<<"Masukkan Ulang Jumlah Harta Emas ( Gram ): ";
+                          cin>>b;
+                          cout<<"Masukkan Harga Emas : Rp. ";
+                          cin>>c;
+                          z=2.5/100*b*c;
+                          cout<<"zakat yang anda keluarkan : Rp. "<<z<<endl;
+                          } else {
+                          cout<<"\n";
+                          cout<<" ======================================\n";
+                          cout<<"||Anda Belum Termasuk Wajib Zakat..!! ||\n";
+                          cout<<" ======================================\n";
+                          }
+                          }
+						  break;
+					 case 3:
+						   {
+						  int a,b,c,z;
+                          cout<<"Masukkan Jumlah Harta Perak ( Gram ) : ";
+                          cin>>a;
+
+                          if (a>=86) {
+                          cout<<"\n";
+                          cout<<" ===============================\n";
+                          cout<<"||Anda Termasuk Wajib Zakat !! ||\n";
+                          cout<<" ===============================\n";
+                          cout<<"\nSilahkan Isi Data Berikut : \n";
+                          cout<<"Masukkan Ulang Jumlah Harta Perak ( Gram ): ";
+                          cin>>b;
+                          cout<<"Masukkan Harga Perak : Rp. ";
+                          cin>>c;
+                          z=2.5/100*b*c;
+                          cout<<"zakat yang anda keluarkan : Rp. "<<z<<endl;
+                          } else {
+                          cout<<"\n";
+                          cout<<" ======================================\n";
+                          cout<<"||Anda Belum Termasuk Wajib Zakat..!! ||\n";
+                          cout<<" ======================================\n";
+                          }
+                          }
+                          break;
+					 case 4:
+						  cout<<"4.Zakat Harta karun\n";
+						  cout<<"masukan nominal uang : Rp. ";cin>>uang;
+						  zakat= uang*0.2;
+						  cout<<"yang harus di zakatkan : Rp. "<<zakat<<endl;
+						  break;
+					 case 5:
+						  cout<<"5.Zakat Pertanian\n";
+						  cout<<"masukan hasil pertanian (harus diatas 520kg) : ";cin>>barang;
+						  zakat= barang*0.1;
+						  cout<<"yang harus di zakatkan (kg) : "<<zakat<<endl;
+						  break;
+					 case 6:
+						  cout<<"6.Zakat Peternakan\n";
+						  barang=1;
+						  cout<<"MEMILIH JENIS HEWAN\n";
+						  cout<<"  1  memiliki onta lebih dari 5 \n";
+						  cout<<"  2  memiliki sapi lebih dari 30\n";
+						  cout<<"  3  memiliki kambing lebih dari 40\n";
+						  cout<<"Apakah anda termasuk : ";cin>>peternakan;
+						  switch(peternakan)
+
+						  {
+								case 1:
+									 cout<<"Wajib zakat onta :"<<barang<<endl;
+									 break;
+								case 2:
+									 cout<<"Wajib zakat sapi :"<<barang<<endl;
+									 break;
+								case 3:
+									 cout<<"Wajib zakat kambing :"<<barang<<endl;
+									 break;
+
+                          }
+                          break;
+                      case 7:
+						  cout<<"7.Zakat Perniagaan\n";
+						  cout<<"masukan hasil kekayaan  : Rp. ";cin>>uang;
+						  zakat= uang*0.025;
+						  cout<<"yang harus di zakatkan : Rp. "<<zakat<<endl;
+						  break;
+                      case 8:
+						  cout<<"8.Zakat Penghasilan\n";
+						  cout<<"masukan jumlah penghasilan  : Rp. ";cin>>uang;
+						  zakat= uang*0.025;
+						  cout<<"yang harus di zakatkan : Rp. "<<zakat<<endl;
+						  break;
+                      case 9:
+						  cout<<"9.Zakat Tabungan\n";
+						  cout<<"masukan jumlah tabungan  : Rp. ";cin>>tb;
+                          cout<<"masukan jumlah pendapatan  : Rp. ";cin>>pendapatan;
+						  zakat= (tb+pendapatan)*0.025;
+						  cout<<"yang harus di zakatkan : Rp. "<<zakat<<endl;
+						  break;
+                     case 10:
+						  cout<<"10.Zakat Investasi\n";
+						  cout<<"masukan jumlah investasi  : Rp. ";cin>>inves;
+                          cout<<"masukan jumlah keuntungan  : Rp. ";cin>>pendapatan;
+						  zakat= (inves+pendapatan)*0.025;
+						  cout<<"yang harus di zakatkan : Rp. "<<zakat<<endl;
+						  break;
+
+
+
+					 default:
+						  cout<<"pilihan anda salah, pilihlah saya jangan dia \n";
+						  cout<<"masukan pilihan yang tepat 1 - 10\n";
+
+
+					 }
+				break;
+		  case 2:
+				int bangundatar;
+				cout<<"ANDA MEMILIH BANGUN DATAR\n";
+				cout<<"1. persegi\n";
+				cout<<"2. lingkaran\n";
+				cout<<"3. segitiga\n";
+				cout<<"4. layang layang\n";
+				cout<<"5. persegi panjang\n";
+				cout<<"6. jajar genjang\n";
+				cout<<"7. trapesium sama kaki\n";
+				cout<<"8. trapesium siku siku\n";
+				cout<<"9. belah ketupat\n";
+				cout<<"masukan angka bangun yang diinginkan :";cin>>bangundatar;
+				switch (bangundatar )
+				{
+					 float s,keliling,luas,pi,r,alas,tinggi,diagonal1,diagonal2,sisiatas,sisibawah,panjang,lebar,sisimiring;
+					 int persegi,lingkaran,segitiga,layanglayang,persegipanjang,jajargenjang,trapesium_sk,trapesium_siku,belahketupat;
+					 case 1:
+						  cout<<"  1. persegi\n ";
+						  cout<<"masukan nilai s :";cin>>s;
+						  keliling=4*s;
+						  luas=s*s;
+
+
+						  cout<<"MEMILIH JENIS OPERASI\n";
+						  cout<<"  1  memilih keliling\n";
+						  cout<<"  2  memilih luas\n";
+						  cout<<" pilih luas atau keliling yang diinginkan: \n";cin>>persegi;
+						  switch(persegi)
+
+						  {
+								case 1:
+									 cout<<"nilai keliling anda :"<<keliling<<endl;
+									 break;
+								case 2:
+									 cout<<"nilai luas anda :"<<luas<<endl;
+									 break;
+						  }
+
+
+						  break;
+					 case 2:
+						  pi=3.14;
+						  cout<<" 2. lingkaran\n";
+						  cout<<"masukan nilai r :";cin>>r;
+						  keliling=2*pi*r;
+						  luas=pi*r*r;
+
+						  cout<<"MEMILIH JENIS OPERASI\n";
+						  cout<<"  1  memilih keliling\n";
+						  cout<<"  2  memilih luas\n";
+						  cout<<" pilih luas atau keliling yang diinginkan: \n";cin>>lingkaran;
+						  switch(lingkaran)
+
+						  {
+								case 1:
+									 cout<<"nilai keliling anda :"<<keliling<<endl;
+									 break;
+								case 2:
+									 cout<<"nilai luas anda :"<<luas<<endl;
+									 break;
+						  }
+
+
+						  break;
+					 case 3:
+						  cout<<"3.segitiga\n";
+						  cout<<"masukan nilai alas anda :";cin>>alas;
+						  cout<<"masukan nilai tinggi anda :";cin>>tinggi;
+						  keliling=3*alas;
+						  luas=0.5*alas*tinggi;
+
+						  cout<<"MEMILIH JENIS OPERASI\n";
+						  cout<<"  1  memilih keliling\n";
+						  cout<<"  2  memilih luas\n";
+						  cout<<" pilih luas atau keliling yang diinginkan: \n";cin>>segitiga;
+						  switch(segitiga)
+
+						  {
+								case 1:
+									 cout<<"nilai keliling anda :"<<keliling<<endl;
+									 break;
+								case 2:
+									 cout<<"nilai luas anda :"<<luas<<endl;
+									 break;
+						  }
+
+						  break;
+					 case 4:
+						  cout<<"4.layang layang\n";
+						  cout<<"masukan nilai diagonal 1 :";cin>>diagonal1;
+						  cout<<"masukan nilai diagonal 2 :";cin>>diagonal2;
+						  cout<<"masukan nilai sisi bawah :";cin>>sisibawah;
+						  cout<<"masukan nilai sisi atas :";cin>>sisiatas;
+						  luas=0.5*diagonal1*diagonal2;
+						  keliling=2*sisibawah+2*sisiatas;
+
+						  cout<<"MEMILIH JENIS OPERASI\n";
+						  cout<<"  1  memilih keliling\n";
+						  cout<<"  2  memilih luas\n";
+						  cout<<" pilih luas atau keliling yang diinginkan: \n";cin>>layanglayang;
+						  switch(layanglayang)
+
+						  {
+								case 1:
+									 cout<<"nilai keliling anda :"<<keliling<<endl;
+									 break;
+								case 2:
+									 cout<<"nilai luas anda :"<<luas<<endl;
+									 break;
+						  }
+
+						  break;
+					 case 5:
+						  cout<<"  5. persegi panjang\n ";
+						  cout<<"masukan nilai panjang :";cin>>panjang;
+						  cout<<"masukan nilai lebar :";cin>>lebar;
+						  keliling=2*panjang + 2*lebar;
+						  luas=panjang*lebar;
+
+
+						  cout<<"MEMILIH JENIS OPERASI\n";
+						  cout<<"  1  memilih keliling\n";
+						  cout<<"  2  memilih luas\n";
+						  cout<<" pilih luas atau keliling yang diinginkan: \n";cin>>persegipanjang;
+						  switch(persegipanjang)
+
+						  {
+								case 1:
+									 cout<<"nilai keliling anda :"<<keliling<<endl;
+									 break;
+								case 2:
+									 cout<<"nilai luas anda :"<<luas<<endl;
+									 break;
+						  }
+
+
+						  break;
+					  case 6:
+						  cout<<"  6. jajar genjang\n ";
+						  cout<<"masukan nilai alas :";cin>>alas;
+						  cout<<"masukan nilai tingi :";cin>>tinggi;
+						  cout<<"masukan nilai sisi miring :";cin>>sisimiring;
+						  keliling=(2*alas) + (2*sisimiring);
+						  luas=alas*tinggi;
+
+
+						  cout<<"MEMILIH JENIS OPERASI\n";
+						  cout<<"  1  memilih keliling\n";
+						  cout<<"  2  memilih luas\n";
+						  cout<<" pilih luas atau keliling yang diinginkan: \n";cin>>jajargenjang;
+						  switch(jajargenjang)
+
+						  {
+								case 1:
+									 cout<<"nilai keliling anda :"<<keliling<<endl;
+									 break;
+								case 2:
+									 cout<<"nilai luas anda :"<<luas<<endl;
+									 break;
+						  }
+
+
+						  break;
+					  case 7:
+						  cout<<"  7. trapesium sama kaki\n ";
+						  cout<<"masukan nilai sisi atas :";cin>>sisiatas;
+						  cout<<"masukan nilai sisi bawah :";cin>>sisibawah;
+						  cout<<"masukan nilai sisi miring :";cin>>sisimiring;
+						  cout<<"masukan nilai tinggi :";cin>>tinggi;
+						  keliling=2*sisimiring + sisiatas + sisibawah;
+						  luas=0.5*tinggi*sisiatas+sisibawah;
+
+
+						  cout<<"MEMILIH JENIS OPERASI\n";
+						  cout<<"  1  memilih keliling\n";
+						  cout<<"  2  memilih luas\n";
+						  cout<<" pilih luas atau keliling yang diinginkan: \n";cin>>trapesium_sk;
+						  switch(trapesium_sk)
+
+						  {
+								case 1:
+									 cout<<"nilai keliling anda :"<<keliling<<endl;
+									 break;
+								case 2:
+									 cout<<"nilai luas anda :"<<luas<<endl;
+									 break;
+							}
+
+
+						  break;
+					  case 8:
+						  cout<<"  8. trapesium siku siku\n ";
+						  cout<<"masukan nilai sisi atas :";cin>>sisiatas;
+						  cout<<"masukan nilai sisi bawah :";cin>>sisibawah;
+						  cout<<"masukan nilai sisi miring :";cin>>sisimiring;
+						  cout<<"masukan nilai tinggi :";cin>>tinggi;
+						  keliling=tinggi + sisimiring + sisiatas + sisibawah;
+						  luas=0.5*tinggi*sisiatas+sisibawah;
+
+
+						  cout<<"MEMILIH JENIS OPERASI\n";
+						  cout<<"  1  memilih keliling\n";
+						  cout<<"  2  memilih luas\n";
+						  cout<<" pilih luas atau keliling yang diinginkan: \n";cin>>trapesium_siku;
+						  switch(trapesium_siku)
+
+						  {
+								case 1:
+									 cout<<"nilai keliling anda :"<<keliling<<endl;
+									 break;
+								case 2:
+									 cout<<"nilai luas anda :"<<luas<<endl;
+									 break;
+							}
+
+
+						  break;
+					  case 9:
+						  cout<<"9. belah ketupat\n";
+						  cout<<"masukan nilai diagonal 1 :";cin>>diagonal1;
+						  cout<<"masukan nilai diagonal 2 :";cin>>diagonal2;
+						  cout<<"masukan nilai sisi :";cin>>s;
+						  luas=0.5*diagonal1*diagonal2;
+						  keliling=4*s;
+
+						  cout<<"MEMILIH JENIS OPERASI\n";
+						  cout<<"  1  memilih keliling\n";
+						  cout<<"  2  memilih luas\n";
+						  cout<<" pilih luas atau keliling yang diinginkan: \n";cin>>belahketupat;
+						  switch(belahketupat)
+
+						  {
+								case 1:
+									 cout<<"nilai keliling anda :"<<keliling<<endl;
+									 break;
+								case 2:
+									 cout<<"nilai luas anda :"<<luas<<endl;
+									 break;
+						  }
+
+						  break;
+					 default:
+						  cout<<"pilihan anda salah\n";
+						  cout<<"masukan pilihan yang tepat 1-9\n";
+				}
+				break;
+		  default:
+						  cout<<"pilihan anda salah\n";
+						  cout<<"masukan pilihan yang tepat 1 dan 2\n";
+	 }
+
+	 return 0 ;
+}
